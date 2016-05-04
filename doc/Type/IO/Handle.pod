@@ -130,12 +130,6 @@ offset if you want to position before the end of the file.
 
 Return the current position of the file pointer in bytes.
 
-=head2 method ins
-
-    method ins(IO::Handle:D: --> Int)
-
-Return the number of lines read from the file.
-
 =head2 method slurp-rest
 
     multi method slurp-rest(IO::Handle:D: :$bin! --> Buf)
@@ -174,7 +168,13 @@ Will flush the filehandle to disk.
 
 This returns a value that the operating system would understand as a "file descriptor" and
 is suitable for passing to a native function that requires a file descriptor as an
-argument such as C<fcntl> or C<ioctl>. 
+argument such as C<fcntl> or C<ioctl>.
+
+=head2 method t
+
+    method t(IO::Handle:D: --> Bool)
+
+Returns L<Bool::True> if the handle is opened to a tty. 
 
 =head1 Related roles and classes
 
