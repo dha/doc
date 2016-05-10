@@ -150,6 +150,14 @@ and defaults to 64K.  The optional C<:bin> named parameter can be specified
 to indicate binary reading of the contents, rather than character based
 reading.
 
+=head2 method path
+
+For a handle opened on a file this returns the L<IO::Path|/type/IO/Path> that represents
+the file. For the standard I/O handles C<$*IN>, C<$*OUT> and C<$*ERR> it returns a
+L<IO::Special|/type/IO/Special> object.
+
+    $fh.path;
+
 =head2 method close
 
 Will close a previously opened filehandle.
@@ -169,6 +177,12 @@ Will flush the filehandle to disk.
 This returns a value that the operating system would understand as a "file descriptor" and
 is suitable for passing to a native function that requires a file descriptor as an
 argument such as C<fcntl> or C<ioctl>.
+
+=head2 method opened
+
+    method opened(IO::Handle:D: --> Bool)
+
+Returns L<Bool::True> if the handle is open.
 
 =head2 method t
 
