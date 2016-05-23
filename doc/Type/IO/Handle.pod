@@ -36,7 +36,7 @@ Returns L<Bool::True> if the read operations have exhausted the content of the f
     method lines($limit = Inf)
 
 Return a lazy list of the file's lines read via L<get>, limited to C<$limit> lines.
-The new line separator (e.g. $*IN.nl-in) will be excluded.
+The new line separator (i.e., C<$*IN.nl-in>) will be excluded.
 
     =for code :allow<B>
     my @data;
@@ -106,7 +106,7 @@ characters.
 
      method seek(IO::Handle:D: Int:D $offset, SeekType:D $whence --> True)
 
-Move the file pointer (that is the position at which any subsequent read
+Move the file pointer (that is, the position at which any subsequent read
 or write operations will begin,) to the byte position specified by
 C<$offset> relative to the location specified by C<$whence> which may be
 one of:
@@ -152,9 +152,9 @@ reading.
 
 =head2 method path
 
-For a handle opened on a file this returns the L<IO::Path|/type/IO/Path> that represents
+For a handle opened on a file this returns the L<IO::Path|/type/IO::Path> that represents
 the file. For the standard I/O handles C<$*IN>, C<$*OUT> and C<$*ERR> it returns a
-L<IO::Special|/type/IO/Special> object.
+L<IO::Special|/type/IO::Special> object.
 
     $fh.path;
 
@@ -188,7 +188,7 @@ Returns L<Bool::True> if the handle is open.
 
     method t(IO::Handle:D: --> Bool)
 
-Returns L<Bool::True> if the handle is opened to a tty. 
+Returns L<Bool::True> if the handle is opened to a tty.
 
 =head1 Related roles and classes
 

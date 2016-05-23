@@ -5,8 +5,8 @@
 =SUBTITLE Represent a Standard I/O device
 
 This provides a similar interface for the special standard input and output
-handles C<$*IN>, C<$*OUT> and C<$*ERR> to that of L<IO::Path|/type/IO/Path>
-for regular files.  It is typically returned by the L<path method|/type/IO/Handle#method_path>
+handles C<$*IN>, C<$*OUT> and C<$*ERR> to that of L<IO::Path|/type/IO::Path>
+for regular files.  It is typically returned by the L<path method|/type/IO::Handle#method_path>
 of those handles so that they can be used interchangeably with the handles of
 regular files.
 
@@ -26,7 +26,7 @@ will be done for you when the special handles are initialised.
     method WHICH(IO::Special:D:) returns Str
 
 This returns a string which identifies the object.
- 
+
 =head2 method Str
 
     method Str(IO::Special:D:)
@@ -63,12 +63,12 @@ The 'file' file test operator, always returns C<False>.
     method s(IO::Special:D:) returns Int
 
 The 'size' file test operator, always returns 0.
- 
+
 =head2 method l
 
     method l(IO::Special:D:) returns Bool
 
-The 'symbolic links' file test operator, always returns C<False>/
+The 'symbolic links' file test operator, always returns C<False>.
 
 =head2 method r
 
