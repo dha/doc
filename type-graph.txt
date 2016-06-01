@@ -272,6 +272,7 @@ class X::Set::Coerce                is Exception
 class X::StubCode                   is Exception
 class X::Eval::NoSuchLang           is Exception
 class X::Seq::Consumed              is Exception
+class X::Caller::NotDynamic         is Exception
 
 [Exceptions]
 # Exceptions: Numbers
@@ -348,6 +349,7 @@ class X::IO::Rmdir                  is Exception   does X::IO
 class X::IO::Unlink                 is Exception   does X::IO
 class X::IO::Symlink                is Exception   does X::IO
 class X::IO::Chmod                  is Exception   does X::IO
+class X::IO::DoesNotExist           is Exception   does X::IO
 
 [Exceptions]
 # Exceptions: Compile-Time
